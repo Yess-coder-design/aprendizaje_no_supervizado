@@ -1,25 +1,30 @@
-# Proyecto 3: Aprendizaje no supervisado - RetailMax
+El presente proyecto tiene como objetivo analizar la base de clientes de RetailMax mediante técnicas de aprendizaje no supervisado, específicamente el algoritmo K-Means. El propósito principal es identificar grupos homogéneos de clientes a partir de variables clave como la edad, el ingreso anual y la puntuación de gasto. A diferencia del aprendizaje supervisado, en este enfoque no se utilizan etiquetas, sino que se buscan patrones naturales en los datos que permitan comprender mejor el comportamiento de los clientes.
 
-## Objetivos de aprendizaje
+ Metodología
 
-- Entender las diferencias clave entre el aprendizaje supervisado, que utiliza datos etiquetados para predecir una salida específica, y el aprendizaje no supervisado, que se enfoca en descubrir patrones o estructuras ocultas en los datos sin utilizar etiquetas.
-- Aprender a utilizar el algoritmo K-Means para agrupar datos en clusters.
-- Desarrollar habilidades para explorar y analizar datos de manera crítica, utilizando visualizaciones y estadísticas para identificar patrones y relaciones importantes entre las variables.
-- Ser capaz de interpretar y analizar los resultados obtenidos del clustering, identificando segmentos de clientes y sus características distintivas que pueden ser utilizadas para estrategias de marketing personalizadas. 
+Se realizó primero un análisis exploratorio de datos (EDA) con el fin de comprender la distribución de las variables y sus relaciones. Posteriormente, se seleccionaron las características más relevantes para el clustering: Age, Annual Income (k$) y Spending Score (1-100). Estas variables fueron estandarizadas para asegurar que todas contribuyeran de manera equilibrada al modelo.
 
-El proyecto anterior trató de aprendizaje supervisado. Éste se caracteriza por la existencia de un conjunto de datos etiquetados donde el modelo aprende a predecir una salida a partir de las características (features) de entrada, ajustándose a patrones existentes en los datos. El objetivo es minimizar el error entre las predicciones del modelo y las etiquetas reales durante el entrenamiento.
+Se aplicó el algoritmo K-Means, evaluando distintos valores de K mediante el método del codo. Con base en este análisis, se seleccionó un número óptimo de clusters que permitió una segmentación equilibrada entre complejidad e interpretabilidad.
 
-Ahora veremos aprendizaje no supervisado, donde no contamos con etiquetas en los datos. En lugar de predecir una salida específica, el objetivo es descubrir patrones ocultos o estructuras inherentes dentro del conjunto de datos. Esto se logra mediante técnicas como el clustering, que agrupa los datos en segmentos similares, o la reducción de dimensionalidad, que simplifica los datos preservando su variabilidad más relevante.
+Resultados
 
-## El proyecto: Descubriendo información del cliente para marketing personalizado
+El modelo permitió identificar distintos segmentos de clientes con características claramente diferenciadas. Entre los grupos más relevantes se encontraron:
 
-La empesa RetailMax te ha contratado como consultor de ciencia de datos para ayudarles a comprender mejor a su base de clientes. RetailMax ha estado experimentando crecimiento, pero sus esfuerzos de marketing no son tan efectivos como podrían ser. Saben que no todos los clientes son iguales, pero carecen de los conocimientos necesarios para adaptar sus estrategias de marketing a diferentes grupos de clientes. Tu tarea es segmentar a sus clientes en grupos distintos basados en su comportamiento de compra y su información demográfica.
+Clientes con alto ingreso y alto gasto, considerados de alto valor para la empresa.
+Clientes con alto ingreso pero bajo gasto, que representan una oportunidad importante de conversión.
+Clientes jóvenes con gasto moderado-alto, potencialmente sensibles a campañas digitales.
+Clientes con bajo ingreso y bajo gasto, que podrían requerir estrategias de bajo costo o fidelización.
 
+La segmentación obtenida proporciona una visión estructurada del comportamiento de los clientes, permitiendo comprender mejor sus necesidades y patrones de consumo.
 
-## Entrega
-Este proyecto consiste en 2 notebooks y un reporte final:
-- [1_EDA.ipynb](./1_EDA.ipynb): en este notebook deberás realizar un análisis exploratorio de datos contestando a las preguntas expuestas en el notebook.
-- [2_clustering.ipynb](./2_clustering.ipynb): implementar el algoritmo K-Means para identificar clusters de clientes.
-- Elaborar tu reporte final como se describe en Hybridge Hub
+Recomendaciones para el equipo de marketing
 
+Con base en los resultados obtenidos, se recomiendan las siguientes estrategias:
 
+Diseñar campañas personalizadas para el segmento de alto valor, con beneficios exclusivos y programas de fidelización.
+Implementar estrategias de conversión para clientes con alto ingreso pero bajo gasto, mediante ofertas personalizadas y recomendaciones de productos.
+Potenciar campañas digitales dirigidas a clientes jóvenes, aprovechando su mayor receptividad a canales digitales.
+Minimizar costos de adquisición en segmentos de bajo valor, enfocándose en estrategias automatizadas o de retención básica.
+Conclusión
+
+El uso de técnicas de clustering ha permitido transformar datos no estructurados en información accionable para la toma de decisiones. Esta segmentación proporciona una base sólida para que RetailMax optimice sus estrategias de marketing, mejore la experiencia del cliente y aumente la rentabilidad general. El siguiente paso recomendado es integrar variables adicionales como comportamiento de compra histórico o frecuencia de visitas para refinar aún más los segmentos obtenidos.
